@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Action Sheets</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="action-sheets-basic-page">
+  <button ion-button block (click)="doAlert()">
+    Show Action Sheet
+  </button>
+
+
+  <ion-list margin-top padding>
+    <ion-item>
+      <ion-label>Notify at:</ion-label>
+      <ion-datetime displayFormat="hh:mm A" pickerFormat="hh mm A" [(ngModel)]="timeText" (ionChange)="timeChange($event)"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
